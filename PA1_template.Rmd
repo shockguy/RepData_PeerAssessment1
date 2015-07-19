@@ -144,5 +144,5 @@ xyplot(steps~interval | daytype ,moddata, layout=c(1,2),aspect='fill', panel=fun
 
 Using the filled data set, this plot attempts to compare the interval step difference for weekdays to weekends.  The blue circles are all the step counts for the intervals.  The red line illustates an average for those points.  The averaging lines seem to indicate an earlier start on steps at the beginning of the day on weekdays.  
 
-Some observations can be made using these graphs.  Peak steps occurs in the morning during weekdays, and late afternoon on weekends.  Activity through weekend days appears more even, with noticably more activity over the middle of the day as compared to weekdays.  Overall, weekday mornings are with the most steps occured.
+Some observations can be made using these graphs.  Peak steps occurs in the morning during weekdays, and late afternoon on weekends.  Activity through weekend days appears more even, with noticably more activity over the middle of the day as compared to weekdays.  Overall, weekday mornings are with the most steps occured.  Peak steps per 5-minute interval seldom exceeds 800, and never by much.
 
