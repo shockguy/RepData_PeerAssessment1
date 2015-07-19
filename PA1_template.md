@@ -80,7 +80,6 @@ hist(daily,breaks=10,main="Histogram of Daily Step Count",xlab="Steps/Day",ylab=
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
-The greatest number of step was typically taken between 835 and 840 AM, with about 206 steps on average for the entire 2 month period.  NAs were omitted.
 
 ```r
 #Determine the mean for each interval.  This will be used to fill in the step NAs.  
@@ -103,6 +102,7 @@ which.max(intmeans24)
 ## 835 
 ## 104
 ```
+The greatest number of step was typically taken between 835 and 840 AM (interval 104), with about 206 steps on average for the entire 2 month period.  NAs were omitted.
 
 Here is a plot of average steps for each interval.  
 
@@ -187,7 +187,7 @@ moddata$daytype<-as.factor(sapply(moddata$day, daytype))
 Here, a lattice type plot is create to compare the step count for weekends and weekdays.
 
 ```r
-xyplot(steps~interval | daytype ,moddata, layout=c(1,2),aspect='fill', panel=function(x,y){
+xyplot(steps~interval | daytype ,moddata, layout=c(1,2),aspect='fill',xlab='Interval Time (24-hour format)',ylab='Steps', panel=function(x,y){
                panel.xyplot(x,y)
                panel.average(x,y,horizontal = FALSE,col.line = 'red',lwd=5)
        })
@@ -195,7 +195,7 @@ xyplot(steps~interval | daytype ,moddata, layout=c(1,2),aspect='fill', panel=fun
 
 ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
 
-Using the filled data set, this plot attempts to compare the interval step difference for weekdays to weekends.  The blue circles are all the step counts for the intervals.  The red line illustates an average for those points.  The averaging lines seem to indicate an earlier start on steps at the beginning of the day on weekdays.  
+Using the filled data set, this plot attempts to compare the interval step difference for weekdays to weekends.  The blue circles are all the step counts for the intervals across the 2-month period.  The red line illustates an average for those points.  The averaging lines seem to indicate an earlier start on steps at the beginning of the day on weekdays.  
 
-Some observations can be made using these graphs.  Peak steps occurs in the morning during weekdays, and late afternoon on weekends.  Activity through weekend days appears more even, with noticably more activity over the middle of the day as compared to weekdays.  Overall, weekday mornings are with the most steps occured.  Peak steps per 5-minute interval seldom exceeds 800, and never by much.
+Some observations can be made using these graphs.  Peak steps occurs in the morning during weekdays, and late afternoon on weekends.  Activity through weekend days appears more even, with noticably more activity over the middle of the day as compared to weekdays.  Overall, weekday mornings are with the most steps occured.  Peak steps per 5-minute interval seldom exceeds 800, and never by much. The red average line confirms the peak average of about 200 step occuring at 830 for all days.
 
