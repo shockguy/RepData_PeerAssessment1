@@ -73,7 +73,7 @@ Just below is the histogram for total daily steps.  NA were omitted.
 hist(daily,breaks=10,main="Histogram of Daily Step Count",xlab="Steps/Day",ylab="Number of Days")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![](Repo_PA1_final_files/figure-html/unnamed-chunk-5-1.png) 
 
 
 ```r
@@ -106,7 +106,7 @@ Here is a plot of average steps for each interval.
 plot(intmeans24,type='l',xlab="Interval (5-minute increment)",ylab="Mean Steps",main="Interval Step Average Across 2 Months")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![](Repo_PA1_final_files/figure-html/unnamed-chunk-7-1.png) 
 
 ## Imputing missing values
 The data is modified to substitute something meaningful in for the 2304 NA step entries.
@@ -151,7 +151,7 @@ Histogram of modified daily steps is just below.
 hist(moddaily,breaks=10,main="Histogram of Daily Step Count For Modified Data",xlab="Steps/Day",ylab="Number of Days")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
+![](Repo_PA1_final_files/figure-html/unnamed-chunk-9-1.png) 
 
 Modification of the data resulted in basically no change in the data trends.  Day frequency count is up, reflecting a more complete data record.
 
@@ -188,7 +188,7 @@ xyplot(steps~interval | daytype ,moddata, layout=c(1,2),aspect='fill',xlab='Inte
        })
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+![](Repo_PA1_final_files/figure-html/unnamed-chunk-12-1.png) 
 
 Using the filled data set, this plot attempts to compare the interval step difference for weekdays to weekends.  The blue circles are all the step counts for the intervals across the 2-month period.  The red line illustates an average for those points.  The averaging lines seem to indicate an earlier start on steps at the beginning of the day on weekdays.  
 
